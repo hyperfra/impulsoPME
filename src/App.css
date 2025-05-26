@@ -36,3 +36,326 @@
     transform: rotate(360deg);
   }
 }
+
+/* Responsive Slide Presentation System */
+
+/* Presentation container - consistent sizing */
+.slide-presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header bar - full width with proper positioning */
+.header-bar-full {
+  width: 100%;
+  position: relative;
+  background: #000080;
+}
+
+.header-bar-full img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Chart sections - prevent title overlay */
+.chart-section {
+  flex: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* Responsive typography system */
+.responsive-title {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.responsive-subtitle {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.responsive-text {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.responsive-small {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  line-height: 1.4;
+}
+
+/* Table responsiveness */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+  white-space: nowrap;
+}
+
+.responsive-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  border-bottom: 2px solid #d1d5db;
+}
+
+.responsive-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Chart containers */
+.chart-container {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.chart-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Pie chart grid */
+.pie-chart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-Content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.pie-chart-item {
+  text-align: center;
+  min-width: 200px;
+}
+
+.pie-chart-item h4 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* List styling for content slides */
+.content-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.content-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Button styling */
+.nav-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-button:hover {
+  opacity: 0.8;
+}
+
+.nav-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.nav-button-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.nav-button-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+/* Tab navigation */
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab-button.active {
+  border-bottom-color: #3b82f6;
+  color: #2563eb;
+}
+
+.tab-button:not(.active) {
+  color: #6b7280;
+}
+
+.tab-button:hover {
+  color: #374151;
+}
+
+/* Fullscreen specific styles */
+@media screen and (min-width: 1024px) {
+  .fullscreen-slide {
+    font-size: 1.2em;
+  }
+  
+  .fullscreen-slide .responsive-title {
+    font-size: 4vh;
+  }
+  
+  .fullscreen-slide .responsive-subtitle {
+    font-size: 2.8vh;
+  }
+  
+  .fullscreen-slide .responsive-text {
+    font-size: 1.8vh;
+  }
+  
+  .fullscreen-slide .responsive-small {
+    font-size: 1.4vh;
+  }
+}
+
+/* Print styles for presentation mode */
+@media print {
+  .slide-presentation {
+    width: 297mm;
+    height: 210mm;
+    page-break-after: always;
+  }
+  
+  .nav-button,
+  .tab-navigation {
+    display: none;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .pie-chart-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pie-chart-item {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .responsive-table {
+    font-size: 0.7rem;
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 0.3rem;
+  }
+  
+  .content-list {
+    padding-left: 1rem;
+  }
+  
+  .tab-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .responsive-table th {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+  }
+  
+  .responsive-table td {
+    border: 1px solid #000000;
+  }
+  
+  .nav-button-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Focus management for keyboard navigation */
+.nav-button:focus,
+.tab-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for slide changes */
+.slide-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Loading states */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

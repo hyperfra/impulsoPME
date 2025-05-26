@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios das PME - Five Credit</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/recharts@2.8.0/umd/Recharts.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .presentation-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 297mm;
+            height: 210mm;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            aspect-ratio: 297/210;
+        }
+        .slide-content {
+            flex: 1;
+            overflow: hidden;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .nav-button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .nav-button:disabled {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+            cursor: default;
+        }
+        .nav-button:not(:disabled) {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+        .mode-button {
+            padding: 0.5rem 1rem;
+            background-color: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } = Recharts;
+
+        // ESAFSlide Component
+        const ESAFSlide = () => {
+            const data = [
+                { country: 'Finlândia', value: 0.48 },
+                { country: 'Alemanha', value: 0.47 },
+                { country: 'Suécia', value: 0.47 },
+                { country: 'Luxemburgo', value: 0.43 },
+                { country: 'Dinamarca', value: 0.42 },
+                { country: 'Áustria', value: 0.41 },
+                { country: 'Bélgica', value: 0.40 },
+                { country: 'Itália', value: 0.40 },
+                { country: 'Países Baixos', value: 0.39 },
+                { country: 'França', value: 0.38 },
+                { country: 'Irlanda', value: 0.37 },
+                { country: 'Croácia', value: 0.36 },
+                { country: 'Eslováquia', value: 0.35 },
+                { country: 'Eslovénia', value: 0.34 },
+                { country: 'Espanha', value: 0.30 },
+                { country: 'Estónia', value: 0.28 },
+                { country: 'Roménia', value: 0.27 },
+                { country: 'Bulgária', value: 0.26 },
+                { country: 'Chipre', value: 0.25 },
+                { country: 'Hungria', value: 0.24 },
+                { country: 'Malta', value: 0.23 },
+                { country: 'Letónia', value: 0.22 },
+                { country: 'Lituânia', value: 0.21 },
+                { country: 'Polónia', value: 0.21 },
+                { country: 'Portugal', value: 0.20 },
+                { country: 'Grécia', value: 0.18 },
+                { country: 'República Checa', value: 0.17 }
+            ];
+
+            const sortedData = [...data].sort((a, b) => b.value - a.value);
+
+            return React.createElement('div', {
+                style: { width: '297mm', height: '210mm', padding: '12mm', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }
+            }, [
+                React.createElement('div', {
+                    key: 'header',
+                    style: { width: 'calc(100% + 24mm)', marginLeft: '-12mm', marginRight: '-12mm', marginTop: '-12mm', marginBottom: '6mm', textAlign: 'center', backgroundColor: '#1e40af', height: '15mm' }
+                }),
+                React.createElement('h2', {
+                    key: 'title',
+                    style: { fontSize: '7mm', fontWeight: 'bold', textAlign: 'center', marginBottom: '6mm', color: '#1e40af', margin: '0 0 6mm 0' }
+                }, 'Paradoxo do SAEF (ECB) e ESAF (EIF)'),
+                React.createElement('h3', {
+                    key: 'subtitle',
+                    style: { fontSize: '5.5mm', fontWeight: '600', textAlign: 'center', marginBottom: '8mm', color: '#2563eb', margin: '0 0 8mm 0' }
+                }, 'Índice ESAF (EIF) - Financiamento das PME 2023'),
+                React.createElement('div', {
+                    key: 'content',
+                    style: { flex: 1, overflow: 'hidden' }
+                }, [
+                    React.createElement('div', {
+                        key: 'chart',
+                        style: { height: '140mm', width: '100%' }
+                    }, React.createElement(ResponsiveContainer, { width: "100%", height: "100%" },
+                        React.createElement(BarChart, {
+                            data: sortedData,
+                            margin: { top: 20, right: 20, left: 20, bottom: 80 },
+                            barSize: 8
+                        }, [
+                            React.createElement(CartesianGrid, { key: 'grid', strokeDasharray: "3 3" }),
+                            React.createElement(XAxis, {
+                                key: 'xaxis',
+                                dataKey: "country",
+                                tick: { fontSize: 8, angle: -90, textAnchor: 'end' },
+                                height: 80,
+                                interval: 0
+                            }),
+                            React.createElement(YAxis, {
+                                key: 'yaxis',
+                                domain: [0, 0.5],
+                                tick: { fontSize: 9 },
+                                tickFormatter: (value) => value.toFixed(1)
+                            }),
+                            React.createElement(Tooltip, {
+                                key: 'tooltip',
+                                formatter: (value) => [value.toFixed(2), '2023'],
+                                labelStyle: { color: '#1f2937' },
+                                contentStyle: { fontSize: '10px' }
+                            }),
+                            React.createElement(Bar, {
+                                key: 'bar',
+                                dataKey: "value",
+                                name: "Índice ESAF 2023"
+                            }, sortedData.map((entry, index) =>
+                                React.createElement(Cell, {
+                                    key: `cell-${index}`,
+                                    fill: entry.country === 'Portugal' ? '#dc2626' : '#3b82f6'
+                                })
+                            ))
+                        ])
+                    )),
+                    React.createElement('div', {
+                        key: 'footer',
+                        style: { marginTop: '4mm', fontSize: '3.5mm', color: '#6b7280', textAlign: 'center' }
+                    }, [
+                        React.createElement('p', {
+                            key: 'p1',
+                            style: { margin: '0 0 2mm 0' }
+                        }, 'Portugal ocupa a 25ª posição (de 27) no Índice ESAF do EIF'),
+                        React.createElement('p', {
+                            key: 'p2',
+                            style: { margin: 0 }
+                        }, 'Fonte: Torfs (2023, atualizado) - setembro 2024')
+                    ])
+                ])
+            ]);
+        };
+
+        // Main App Component (simplified version)
+        const App = () => {
+            const [currentSlide, setCurrentSlide] = useState(0);
+
+            // Sample slide content - you would replace this with your full presentation
+            const slideContent = [
+                React.createElement('div', {
+                    key: 'title',
+                    style: { width: '297mm', height: '210mm', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20mm', backgroundColor: '#f9fafb', boxSizing: 'border-box' }
+                }, [
+                    React.createElement('div', {
+                        key: 'header',
+                        style: { width: 'calc(100% + 40mm)', marginLeft: '-20mm', marginRight: '-20mm', marginTop: '-20mm', marginBottom: '10mm', textAlign: 'center', backgroundColor: '#1e40af', height: '15mm' }
+                    }),
+                    React.createElement('h1', {
+                        key: 'title',
+                        style: { fontSize: '12mm', fontWeight: 'bold', color: '#1e3a8a', margin: '0 0 15mm 0' }
+                    }, 'Five Credit'),
+                    React.createElement('h2', {
+                        key: 'subtitle',
+                        style: { fontSize: '10mm', fontWeight: 'bold', textAlign: 'center', marginBottom: '15mm', color: '#1e40af', margin: '0 0 15mm 0' }
+                    }, 'Desafios das PME'),
+                    React.createElement('div', {
+                        key: 'footer',
+                        style: { marginTop: 'auto', textAlign: 'center', color: '#4b5563' }
+                    }, [
+                        React.createElement('p', {
+                            key: 'presenter',
+                            style: { fontSize: '6mm', margin: '0 0 5mm 0' }
+                        }, 'Apresentado por: Francesco Franco'),
+                        React.createElement('p', {
+                            key: 'date',
+                            style: { fontSize: '5mm', margin: 0 }
+                        }, '3 de Junho de 2025')
+                    ])
+                ]),
+                React.createElement(ESAFSlide, { key: 'esaf' })
+                // Add more slides here...
+            ];
+
+            return React.createElement('div', { style: { maxWidth: '1200px', margin: '0 auto' } }, [
+                React.createElement('div', {
+                    key: 'presentation',
+                    className: 'presentation-container'
+                }, [
+                    React.createElement('div', {
+                        key: 'slide',
+                        className: 'slide-content'
+                    }, slideContent[currentSlide]),
+                    React.createElement('div', {
+                        key: 'nav',
+                        className: 'navigation'
+                    }, [
+                        React.createElement('button', {
+                            key: 'prev',
+                            onClick: () => setCurrentSlide(Math.max(0, currentSlide - 1)),
+                            disabled: currentSlide === 0,
+                            className: 'nav-button'
+                        }, 'Anterior'),
+                        React.createElement('div', {
+                            key: 'counter',
+                            style: { fontSize: '0.875rem', color: '#6b7280' }
+                        }, `Slide ${currentSlide + 1} de ${slideContent.length}`),
+                        React.createElement('button', {
+                            key: 'next',
+                            onClick: () => setCurrentSlide(Math.min(slideContent.length - 1, currentSlide + 1)),
+                            disabled: currentSlide === slideContent.length - 1,
+                            className: 'nav-button'
+                        }, 'Próximo')
+                    ])
+                ])
+            ]);
+        };
+
+        ReactDOM.render(React.createElement(App), document.getElementById('root'));
+    </script>
+</body>
+</html>
