@@ -331,6 +331,16 @@ const BusinessComparisonDashboard = () => {
               ))}
             </tbody>
           </table>
+          {/* Legend */}
+      <div style={{ 
+        marginTop: isFullscreen ? '2vh' : '1rem',
+        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+        color: '#6b7280',
+        lineHeight: '1.4',
+        textAlign: 'left'
+      }}>
+        <strong>Fonte:</strong> INE,  Sistema de contas integradas das empresas (SCIE).
+      </div>
         </div>
       </div>
     );
@@ -442,7 +452,19 @@ const BusinessComparisonDashboard = () => {
               ))}
             </tbody>
           </table>
+          {/* Legend */}
+      <div style={{ 
+        marginTop: isFullscreen ? '2vh' : '1rem',
+        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+        color: '#6b7280',
+        lineHeight: '1.4',
+        textAlign: 'left'
+      }}>
+        <strong>Fonte:</strong> Eurostat, Structural business statistics (SBS).
+      </div>
+          
         </div>
+        
       </div>
     );
   };
@@ -472,52 +494,63 @@ const BusinessComparisonDashboard = () => {
   };
 
   const renderTableData = () => {
-    const fontSize = getFontSizes();
-    const cellPadding = isFullscreen ? '1vh 1.5vw' : '0.75rem';
-    
-    return (
-      <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', overflowX: 'auto' }}>
-        <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1rem' }}>
-          Empresas em Portugal
-        </h3>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: fontSize.tableText }}>
-          <thead>
-            <tr>
-              {tableData.headers.map((header, index) => (
-                <th key={index} style={{
+  const fontSize = getFontSizes();
+  const cellPadding = isFullscreen ? '1vh 1.5vw' : '0.75rem';
+  
+  return (
+    <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', overflowX: 'auto' }}>
+      <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1rem' }}>
+        Empresas em Portugal
+      </h3>
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: fontSize.tableText }}>
+        <thead>
+          <tr>
+            {tableData.headers.map((header, index) => (
+              <th key={index} style={{
+                padding: cellPadding,
+                backgroundColor: index === 0 ? '#f3f4f6' : '#f9fafb',
+                textAlign: index === 0 ? 'left' : 'center',
+                borderBottom: '2px solid #d1d5db',
+                fontWeight: '600',
+                fontSize: fontSize.tableHeader
+              }}>
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {tableData.rows.map((row, rowIndex) => (
+            <tr key={rowIndex} style={{ backgroundColor: rowIndex % 2 === 0 ? '#ffffff' : '#f9fafb' }}>
+              {row.map((cell, cellIndex) => (
+                <td key={cellIndex} style={{
                   padding: cellPadding,
-                  backgroundColor: index === 0 ? '#f3f4f6' : '#f9fafb',
-                  textAlign: index === 0 ? 'left' : 'center',
-                  borderBottom: '2px solid #d1d5db',
-                  fontWeight: '600',
-                  fontSize: fontSize.tableHeader
+                  textAlign: cellIndex === 0 ? 'left' : 'right',
+                  borderBottom: '1px solid #e5e7eb',
+                  fontWeight: cellIndex === 0 ? '500' : '400',
+                  fontSize: fontSize.tableText
                 }}>
-                  {header}
-                </th>
+                  {cell}
+                </td>
               ))}
             </tr>
-          </thead>
-          <tbody>
-            {tableData.rows.map((row, rowIndex) => (
-              <tr key={rowIndex} style={{ backgroundColor: rowIndex % 2 === 0 ? '#ffffff' : '#f9fafb' }}>
-                {row.map((cell, cellIndex) => (
-                  <td key={cellIndex} style={{
-                    padding: cellPadding,
-                    textAlign: cellIndex === 0 ? 'left' : 'right',
-                    borderBottom: '1px solid #e5e7eb',
-                    fontWeight: cellIndex === 0 ? '500' : '400',
-                    fontSize: fontSize.tableText
-                  }}>
-                    {cell}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          ))}
+        </tbody>
+      </table>
+      
+      {/* Legend */}
+      <div style={{ 
+        marginTop: isFullscreen ? '2vh' : '1rem',
+        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+        color: '#6b7280',
+        lineHeight: '1.4',
+        textAlign: 'left'
+      }}>
+        <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE). O SCIE resulta de um processo de integração da informação estatística sobre empresas, baseado em dados administrativos, com particular destaque para a Informação Empresarial Simplificada (IES) e complementada, por um lado, com dados para as empresas individuais (empresários em nome individual e trabalhadores independentes), recebidos por via do protocolo estabelecido entre o INE e a AT, e por outro, com informação proveniente do Ficheiro de Unidades Estatísticas (FUE) do INE.
       </div>
-    );
-  };
+    </div>
+  );
+};
 
   const renderPieCharts = () => {
     const pieSize = isFullscreen ? Math.min(window.innerWidth * 0.25, 250) : 220;
@@ -586,33 +619,54 @@ const BusinessComparisonDashboard = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
+        {/* Legend */}
+      <div style={{ 
+        marginTop: isFullscreen ? '2vh' : '1rem',
+        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+        color: '#6b7280',
+        lineHeight: '1.4',
+        textAlign: 'left'
+      }}>
+        <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE).
+      </div>
       </div>
     );
   };
 
-  const renderSectorAnalysis = () => {
-    const chartHeight = isFullscreen ? '70vh' : '500px';
-    return (
-      <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
-        <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1.5rem' }}>
-          Análise por Setor: Produtividade VAB
-        </h3>
-        <div style={{ width: '100%', height: chartHeight }}>
-          <ResponsiveContainer>
-            <BarChart data={sectorData} margin={{ top: 20, right: 30, left: 40, bottom: 120 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="sector" angle={-45} textAnchor="end" height={120} fontSize={10} />
-              <YAxis label={{ value: 'Produtividade VAB (€/funcionário)', angle: -90, position: 'insideLeft' }} />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="produtividadeVABEmpresasIndividuais" name="Empresa Individual" fill="#0088FE" />
-              <Bar dataKey="produtividadeVABSociedades" name="Sociedade" fill="#00C49F" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+const renderSectorAnalysis = () => {
+  const chartHeight = isFullscreen ? '65vh' : '450px'; // Slightly reduced height
+  return (
+    <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
+      <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1.5rem' }}>
+        Análise por Setor: Produtividade VAB
+      </h3>
+      <div style={{ width: '100%', height: chartHeight }}>
+        <ResponsiveContainer>
+          <BarChart data={sectorData} margin={{ top: 20, right: 30, left: 40, bottom: 80 }}> {/* Reduced from 120 to 80 */}
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="sector" angle={-45} textAnchor="end" height={80} fontSize={10} /> {/* Reduced from 120 to 80 */}
+            <YAxis label={{ value: 'Produtividade VAB (€/funcionário)', angle: -90, position: 'insideLeft' }} />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="produtividadeVABEmpresasIndividuais" name="Empresa Individual" fill="#0088FE" />
+            <Bar dataKey="produtividadeVABSociedades" name="Sociedade" fill="#00C49F" />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
-    );
-  };
+      
+      {/* Legend */}
+      <div style={{ 
+        marginTop: isFullscreen ? '1vh' : '0.5rem', // Reduced margin
+        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+        color: '#6b7280',
+        lineHeight: '1.4',
+        textAlign: 'left'
+      }}>
+        <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE). 
+      </div>
+    </div>
+  );
+};
 
   const renderTableWithPieCharts = () => (
     <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
@@ -673,7 +727,7 @@ const BusinessComparisonDashboard = () => {
             display: 'block'
           }}>
             <img
-              src="/bar.png"
+              src={`${process.env.PUBLIC_URL}/bar.png`}
               alt="Header Bar"
               style={{
                 position: 'absolute',
@@ -693,18 +747,18 @@ const BusinessComparisonDashboard = () => {
           Índice ESAF (EIF) - Financiamento das PME 2023
         </h3>
         <div style={{ flex: 1, overflow: 'hidden' }}>
-          <div style={{ height: isFullscreen ? '70vh' : '140mm', width: '100%' }}>
+          <div style={{ height: isFullscreen ? '65vh' : '130mm', width: '100%' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={sortedData}
-                margin={{ top: 20, right: 20, left: 20, bottom: 80 }}
+                margin={{ top: 20, right: 20, left: 20, bottom: 60 }}
                 barSize={isFullscreen ? 12 : 8}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
                   dataKey="country"
                   tick={{ fontSize: isFullscreen ? 10 : 8, angle: -90, textAnchor: 'end' }}
-                  height={80}
+                  height={60}
                   interval={0}
                 />
                 <YAxis
@@ -728,8 +782,17 @@ const BusinessComparisonDashboard = () => {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div style={{ marginTop: isFullscreen ? '2vh' : '4mm', fontSize: localFontSizes.small, color: '#6b7280', textAlign: 'center' }}>
-            <p style={{ margin: `0 0 ${isFullscreen ? '1vh' : '2mm'} 0` }}>Portugal ocupa a 25ª posição (de 27) no Índice ESAF do EIF</p>
+          <div style={{ 
+            marginTop: isFullscreen ? '1vh' : '2mm',
+            fontSize: localFontSizes.small, 
+            color: '#6b7280', 
+            textAlign: 'justify',
+            maxWidth: '90%',
+            margin: `${isFullscreen ? '1vh' : '2mm'} auto 0`
+          }}>
+            <p style={{ margin: `0 0 ${isFullscreen ? '1vh' : '2mm'} 0` }}>
+              Portugal ocupa a 25ª posição (de 27) no Índice ESAF do EIF
+            </p>
             <p style={{ margin: 0 }}>Fonte: Torfs (2023, atualizado) - setembro 2024</p>
           </div>
         </div>
@@ -737,7 +800,7 @@ const BusinessComparisonDashboard = () => {
     );
   };
 
-  // Responsive SAEF Slide Component
+  // Responsive SAFE Slide Component
   const SAEFSlide = () => {
     const [activeMetric, setActiveMetric] = useState('financingGap');
 
@@ -803,7 +866,7 @@ const BusinessComparisonDashboard = () => {
             display: 'block'
           }}>
             <img
-              src="/bar.png"
+              src={`${process.env.PUBLIC_URL}/bar.png`}
               alt="Header Bar"
               style={{
                 position: 'absolute',
@@ -855,18 +918,18 @@ const BusinessComparisonDashboard = () => {
         </div>
 
         <div style={{ flex: 1, overflow: 'hidden' }}>
-          <div style={{ height: isFullscreen ? '60vh' : '120mm', width: '100%' }}>
+          <div style={{ height: isFullscreen ? '55vh' : '110mm', width: '100%' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={currentData}
-                margin={{ top: 20, right: 20, left: 20, bottom: 60 }}
+                margin={{ top: 20, right: 20, left: 20, bottom: 40 }}
                 barSize={isFullscreen ? 20 : 15}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
                   dataKey="country"
                   tick={{ fontSize: isFullscreen ? 12 : 9, angle: -45, textAnchor: 'end' }}
-                  height={60}
+                  height={40}
                   interval={0}
                 />
                 <YAxis
@@ -898,7 +961,14 @@ const BusinessComparisonDashboard = () => {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div style={{ marginTop: isFullscreen ? '2vh' : '4mm', fontSize: localFontSizes.small, color: '#6b7280', textAlign: 'center' }}>
+          <div style={{ 
+            marginTop: isFullscreen ? '1vh' : '2mm',
+            fontSize: localFontSizes.small, 
+            color: '#6b7280', 
+            textAlign: 'justify',
+            maxWidth: '90%',
+            margin: `${isFullscreen ? '1vh' : '2mm'} auto 0`
+          }}>
             <p style={{ margin: `0 0 ${isFullscreen ? '1vh' : '2mm'} 0` }}>
               {activeMetric === 'financingGap'
                 ? 'Portugal apresenta uma lacuna de financiamento negativa (-11%), indicando melhoria no acesso'
@@ -917,7 +987,7 @@ const BusinessComparisonDashboard = () => {
     // Slide 1: Image slide
     <div key="image-intro" style={{ ...getSlideStyle(), alignItems: 'center', justifyContent: 'center', padding: '0' }}>
       <img
-        src="slide1.png"
+        src={`${process.env.PUBLIC_URL}/slide1.png`}
         alt="Introduction Image"
         style={{
           maxWidth: '100%',
@@ -938,7 +1008,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -982,7 +1052,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1035,7 +1105,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1080,7 +1150,7 @@ const BusinessComparisonDashboard = () => {
       </div>
     </div>,
 
-   // Slide 5: Paradox
+   // Slide 5: Paradox ENI data
     <div key="paradox" style={getSlideStyle()}>
       <div style={getHeaderBarStyle()}>
         <div style={{
@@ -1091,7 +1161,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1123,7 +1193,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1155,7 +1225,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1187,7 +1257,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1219,7 +1289,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1254,44 +1324,61 @@ const BusinessComparisonDashboard = () => {
 
     // Slide 12: Microdata
     <div key="microdata1" style={getSlideStyle()}>
-      <div style={getHeaderBarStyle()}>
-        <div style={{
-          width: '100%',
-          height: isFullscreen ? '8vh' : '15mm',
-          position: 'relative',
-          background: '#000080',
-          display: 'block'
-        }}>
-          <img
-            src="/bar.png"
-            alt="Header Bar"
-            style={{
-              position: 'absolute',
-              right: 0,
-              top: 0,
-              height: '100%',
-              width: 'auto',
-              objectFit: 'contain'
-            }}
-          />
-        </div>
-      </div>
-      <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
-        III. Micro e PME dados micro - KPIs
-      </h2>
-      <div style={{ flex: 1, overflow: 'hidden' }}>
-        <iframe
-          src="metricas_financeiras_distribuicao.html"
-          style={{
-            width: '100%',
-            height: '100%',
-            border: 'none',
-            backgroundColor: 'white'
-          }}
-          title="KPI's"
-        />
-      </div>
-    </div>,
+  <div style={getHeaderBarStyle()}>
+    <div style={{
+      width: '100%',
+      height: isFullscreen ? '8vh' : '15mm',
+      position: 'relative',
+      background: '#000080',
+      display: 'block'
+    }}>
+      <img
+        src={`${process.env.PUBLIC_URL}/bar.png`}
+        alt="Header Bar"
+        style={{
+          position: 'absolute',
+          right: 0,
+          top: 0,
+          height: '100%',
+          width: 'auto',
+          objectFit: 'contain'
+        }}
+      />
+    </div>
+  </div>
+  <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
+    III. Micro e PME dados micro - KPIs
+  </h2>
+  <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
+    <iframe
+      src="metricas_financeiras_distribuicao.html"
+      style={{
+        width: '100%',
+        height: '100%',
+        border: 'none',
+        backgroundColor: 'white'
+      }}
+      title="KPI's"
+    />
+    
+    {/* Legend positioned over the iframe */}
+    <div style={{ 
+      position: 'absolute',
+      bottom: isFullscreen ? '1vh' : '2mm',
+      left: isFullscreen ? '1vw' : '2mm',
+      fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+      color: '#6b7280',
+      lineHeight: '1.4',
+      textAlign: 'left',
+      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+      padding: isFullscreen ? '0.5vh 1vw' : '1mm 2mm',
+      borderRadius: '2px',
+      zIndex: 10
+    }}>
+      <strong>Fonte:</strong> Moody's Corporation, Moody's Investors Service, Inc.
+    </div>
+  </div>
+</div>,
 
     // Slide 13: Microdata Scoring
     <div key="microdata2" style={getSlideStyle()}>
@@ -1304,7 +1391,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1344,7 +1431,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1446,6 +1533,46 @@ const BusinessComparisonDashboard = () => {
         </div>
       </div>
     </div>,
+      // Slide 15: Five Scoring
+    <div key="microdata2" style={getSlideStyle()}>
+      <div style={getHeaderBarStyle()}>
+        <div style={{
+          width: '100%',
+          height: isFullscreen ? '8vh' : '15mm',
+          position: 'relative',
+          background: '#000080',
+          display: 'block'
+        }}>
+          <img
+            src={`${process.env.PUBLIC_URL}/bar.png`}
+            alt="Header Bar"
+            style={{
+              position: 'absolute',
+              right: 0,
+              top: 0,
+              height: '100%',
+              width: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+        </div>
+      </div>
+      <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
+        III. Micro e PME dados micro - Scoring Five Credit
+      </h2>
+      <div style={{ flex: 1, overflow: 'hidden' }}>
+        <iframe
+          src="ratings_pie_quality_2023.html"
+          style={{
+            width: '100%',
+            height: '100%',
+            border: 'none',
+            backgroundColor: 'white'
+          }}
+          title="Scoring de 100k empresas"
+        />
+      </div>
+    </div>,
     // Slide 15: Conclusion
     <div key="conclusion" style={{ ...getSlideStyle(), backgroundColor: '#f9fafb' }}>
       <div style={getHeaderBarStyle()}>
@@ -1457,7 +1584,7 @@ const BusinessComparisonDashboard = () => {
           display: 'block'
         }}>
           <img
-            src="/bar.png"
+            src={`${process.env.PUBLIC_URL}/bar.png`}
             alt="Header Bar"
             style={{
               position: 'absolute',
@@ -1477,15 +1604,15 @@ const BusinessComparisonDashboard = () => {
         <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
           <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
             <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>xxx</span>
+            <span>As ENI representam <strong>66%</strong> das empresas mas apenas <strong>6,5%</strong> do VAB nacional.</span>
           </li>
           <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
             <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>xxx</span>
+            <span>Gap de produtividade significativo entre Portugal e a <strong>média UE-27</strong>.</span>
           </li>
           <li style={{ display: 'flex', alignItems: 'center' }}>
             <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>xxx</span>
+            <span>Diferenças setoriais variam de <strong>1.3x</strong> até <strong>9.5x</strong> na produtividade.</span>
           </li>
         </ul>
       </div>
