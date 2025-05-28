@@ -1129,7 +1129,7 @@ const BusinessComparisonDashboard = () => {
           <ul style={{ listStyleType: 'disc', paddingLeft: isFullscreen ? '3vw' : '8mm', margin: 0 }}>
             <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>O inquérito SAFE (BCE) revela uma melhoria no acesso ao financiamento no último semestre, com obstáculos relativamente alinhados com outros países da Zona Euro</li>
             <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>O indicador ESAF (FEI) coloca Portugal numa posição muito desfavorável, com apenas 2 países apresentando pior acesso ao financiamento</li>
-            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>O SAFE tem uma perspetiva mais conjuntural e centrada no setor bancário</li>
+            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>O SAFE tem uma perspetiva mais conjuntural e centrada no setor bancário. O ESAF tem uma perspectiva mais estrutural e abrangente alem da banca.</li>
             <li>As diferenças metodológicas entre os dois instrumentos explicam este aparente paradoxo</li>
           </ul>
         </div>
@@ -1559,7 +1559,7 @@ const BusinessComparisonDashboard = () => {
         </div>
       </div>
       <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
-        III. Micro e PME dados micro - Scoring Five Credit
+        III. Micro e PME dados micro - Scoring Five Credit - CONFIDENTIAL
       </h2>
       <div style={{ flex: 1, overflow: 'hidden' }}>
         <iframe
