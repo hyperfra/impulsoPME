@@ -139,7 +139,7 @@ const BusinessComparisonDashboard = () => {
     const baseWidth = isFullscreen ? '100vw' : '297mm';
     const baseHeight = isFullscreen ? '100vh' : '210mm';
     const basePadding = isFullscreen ? '3vw' : '15mm';
-    
+
     return {
       width: baseWidth,
       height: baseHeight,
@@ -332,15 +332,15 @@ const BusinessComparisonDashboard = () => {
             </tbody>
           </table>
           {/* Legend */}
-      <div style={{ 
-        marginTop: isFullscreen ? '2vh' : '1rem',
-        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
-        color: '#6b7280',
-        lineHeight: '1.4',
-        textAlign: 'left'
-      }}>
-        <strong>Fonte:</strong> INE,  Sistema de contas integradas das empresas (SCIE).
-      </div>
+          <div style={{
+            marginTop: isFullscreen ? '2vh' : '1rem',
+            fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+            color: '#6b7280',
+            lineHeight: '1.4',
+            textAlign: 'left'
+          }}>
+            <strong>Fonte:</strong> INE,  Sistema de contas integradas das empresas (SCIE).
+          </div>
         </div>
       </div>
     );
@@ -453,18 +453,18 @@ const BusinessComparisonDashboard = () => {
             </tbody>
           </table>
           {/* Legend */}
-      <div style={{ 
-        marginTop: isFullscreen ? '2vh' : '1rem',
-        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
-        color: '#6b7280',
-        lineHeight: '1.4',
-        textAlign: 'left'
-      }}>
-        <strong>Fonte:</strong> Eurostat, Structural business statistics (SBS).
-      </div>
-          
+          <div style={{
+            marginTop: isFullscreen ? '2vh' : '1rem',
+            fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+            color: '#6b7280',
+            lineHeight: '1.4',
+            textAlign: 'left'
+          }}>
+            <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE) e Eurostat, Structural business statistics (SBS). Os cálculos para médias e grandes empresas são efetuados com base nos dados do INE, uma vez que estes dados são classificados como confidenciais no Eurostat. Por conseguinte, podem existir algumas limitações de comparabilidade.
+          </div>
+
         </div>
-        
+
       </div>
     );
   };
@@ -494,68 +494,68 @@ const BusinessComparisonDashboard = () => {
   };
 
   const renderTableData = () => {
-  const fontSize = getFontSizes();
-  const cellPadding = isFullscreen ? '1vh 1.5vw' : '0.75rem';
-  
-  return (
-    <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', overflowX: 'auto' }}>
-      <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1rem' }}>
-        Empresas em Portugal
-      </h3>
-      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: fontSize.tableText }}>
-        <thead>
-          <tr>
-            {tableData.headers.map((header, index) => (
-              <th key={index} style={{
-                padding: cellPadding,
-                backgroundColor: index === 0 ? '#f3f4f6' : '#f9fafb',
-                textAlign: index === 0 ? 'left' : 'center',
-                borderBottom: '2px solid #d1d5db',
-                fontWeight: '600',
-                fontSize: fontSize.tableHeader
-              }}>
-                {header}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {tableData.rows.map((row, rowIndex) => (
-            <tr key={rowIndex} style={{ backgroundColor: rowIndex % 2 === 0 ? '#ffffff' : '#f9fafb' }}>
-              {row.map((cell, cellIndex) => (
-                <td key={cellIndex} style={{
+    const fontSize = getFontSizes();
+    const cellPadding = isFullscreen ? '1vh 1.5vw' : '0.75rem';
+
+    return (
+      <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', overflowX: 'auto' }}>
+        <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1rem' }}>
+          Empresas em Portugal
+        </h3>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: fontSize.tableText }}>
+          <thead>
+            <tr>
+              {tableData.headers.map((header, index) => (
+                <th key={index} style={{
                   padding: cellPadding,
-                  textAlign: cellIndex === 0 ? 'left' : 'right',
-                  borderBottom: '1px solid #e5e7eb',
-                  fontWeight: cellIndex === 0 ? '500' : '400',
-                  fontSize: fontSize.tableText
+                  backgroundColor: index === 0 ? '#f3f4f6' : '#f9fafb',
+                  textAlign: index === 0 ? 'left' : 'center',
+                  borderBottom: '2px solid #d1d5db',
+                  fontWeight: '600',
+                  fontSize: fontSize.tableHeader
                 }}>
-                  {cell}
-                </td>
+                  {header}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-      
-      {/* Legend */}
-      <div style={{ 
-        marginTop: isFullscreen ? '2vh' : '1rem',
-        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
-        color: '#6b7280',
-        lineHeight: '1.4',
-        textAlign: 'left'
-      }}>
-        <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE). O SCIE resulta de um processo de integração da informação estatística sobre empresas, baseado em dados administrativos, com particular destaque para a Informação Empresarial Simplificada (IES) e complementada, por um lado, com dados para as empresas individuais (empresários em nome individual e trabalhadores independentes), recebidos por via do protocolo estabelecido entre o INE e a AT, e por outro, com informação proveniente do Ficheiro de Unidades Estatísticas (FUE) do INE.
+          </thead>
+          <tbody>
+            {tableData.rows.map((row, rowIndex) => (
+              <tr key={rowIndex} style={{ backgroundColor: rowIndex % 2 === 0 ? '#ffffff' : '#f9fafb' }}>
+                {row.map((cell, cellIndex) => (
+                  <td key={cellIndex} style={{
+                    padding: cellPadding,
+                    textAlign: cellIndex === 0 ? 'left' : 'right',
+                    borderBottom: '1px solid #e5e7eb',
+                    fontWeight: cellIndex === 0 ? '500' : '400',
+                    fontSize: fontSize.tableText
+                  }}>
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        {/* Legend */}
+        <div style={{
+          marginTop: isFullscreen ? '2vh' : '1rem',
+          fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+          color: '#6b7280',
+          lineHeight: '1.4',
+          textAlign: 'left'
+        }}>
+          <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE). O SCIE resulta de um processo de integração da informação estatística sobre empresas, baseado em dados administrativos, com particular destaque para a Informação Empresarial Simplificada (IES) e complementada, por um lado, com dados para as empresas individuais (empresários em nome individual e trabalhadores independentes), recebidos por via do protocolo estabelecido entre o INE e a AT, e por outro, com informação proveniente do Ficheiro de Unidades Estatísticas (FUE) do INE.
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
   const renderPieCharts = () => {
     const pieSize = isFullscreen ? Math.min(window.innerWidth * 0.25, 250) : 220;
     const pieRadius = isFullscreen ? 70 : 60;
-    
+
     return (
       <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: isFullscreen ? '2vw' : '1rem' }}>
@@ -593,7 +593,7 @@ const BusinessComparisonDashboard = () => {
       </div>
     );
   };
-  
+
 
   const renderProductivityChart = () => {
     const chartHeight = isFullscreen ? '65vh' : '350px';
@@ -620,53 +620,53 @@ const BusinessComparisonDashboard = () => {
           </ResponsiveContainer>
         </div>
         {/* Legend */}
-      <div style={{ 
-        marginTop: isFullscreen ? '2vh' : '1rem',
-        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
-        color: '#6b7280',
-        lineHeight: '1.4',
-        textAlign: 'left'
-      }}>
-        <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE).
-      </div>
+        <div style={{
+          marginTop: isFullscreen ? '2vh' : '1rem',
+          fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+          color: '#6b7280',
+          lineHeight: '1.4',
+          textAlign: 'left'
+        }}>
+          <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE).
+        </div>
       </div>
     );
   };
 
-const renderSectorAnalysis = () => {
-  const chartHeight = isFullscreen ? '65vh' : '450px'; // Slightly reduced height
-  return (
-    <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
-      <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1.5rem' }}>
-        Análise por Setor: Produtividade VAB
-      </h3>
-      <div style={{ width: '100%', height: chartHeight }}>
-        <ResponsiveContainer>
-          <BarChart data={sectorData} margin={{ top: 20, right: 30, left: 40, bottom: 80 }}> {/* Reduced from 120 to 80 */}
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="sector" angle={-45} textAnchor="end" height={80} fontSize={10} /> {/* Reduced from 120 to 80 */}
-            <YAxis label={{ value: 'Produtividade VAB (€/funcionário)', angle: -90, position: 'insideLeft' }} />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="produtividadeVABEmpresasIndividuais" name="Empresa Individual" fill="#0088FE" />
-            <Bar dataKey="produtividadeVABSociedades" name="Sociedade" fill="#00C49F" />
-          </BarChart>
-        </ResponsiveContainer>
+  const renderSectorAnalysis = () => {
+    const chartHeight = isFullscreen ? '65vh' : '450px'; // Slightly reduced height
+    return (
+      <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
+        <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1.5rem' }}>
+          Análise por Setor: Produtividade VAB
+        </h3>
+        <div style={{ width: '100%', height: chartHeight }}>
+          <ResponsiveContainer>
+            <BarChart data={sectorData} margin={{ top: 20, right: 30, left: 40, bottom: 80 }}> {/* Reduced from 120 to 80 */}
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="sector" angle={-45} textAnchor="end" height={80} fontSize={10} /> {/* Reduced from 120 to 80 */}
+              <YAxis label={{ value: 'Produtividade VAB (€/funcionário)', angle: -90, position: 'insideLeft' }} />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="produtividadeVABEmpresasIndividuais" name="Empresa Individual" fill="#0088FE" />
+              <Bar dataKey="produtividadeVABSociedades" name="Sociedade" fill="#00C49F" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Legend */}
+        <div style={{
+          marginTop: isFullscreen ? '1vh' : '0.5rem', // Reduced margin
+          fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+          color: '#6b7280',
+          lineHeight: '1.4',
+          textAlign: 'left'
+        }}>
+          <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE).
+        </div>
       </div>
-      
-      {/* Legend */}
-      <div style={{ 
-        marginTop: isFullscreen ? '1vh' : '0.5rem', // Reduced margin
-        fontSize: isFullscreen ? '0.8vh' : '0.75rem',
-        color: '#6b7280',
-        lineHeight: '1.4',
-        textAlign: 'left'
-      }}>
-        <strong>Fonte:</strong> INE, Sistema de contas integradas das empresas (SCIE). 
-      </div>
-    </div>
-  );
-};
+    );
+  };
 
   const renderTableWithPieCharts = () => (
     <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
@@ -782,10 +782,10 @@ const renderSectorAnalysis = () => {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div style={{ 
+          <div style={{
             marginTop: isFullscreen ? '1vh' : '2mm',
-            fontSize: localFontSizes.small, 
-            color: '#6b7280', 
+            fontSize: localFontSizes.small,
+            color: '#6b7280',
             textAlign: 'justify',
             maxWidth: '90%',
             margin: `${isFullscreen ? '1vh' : '2mm'} auto 0`
@@ -961,10 +961,10 @@ const renderSectorAnalysis = () => {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div style={{ 
+          <div style={{
             marginTop: isFullscreen ? '1vh' : '2mm',
-            fontSize: localFontSizes.small, 
-            color: '#6b7280', 
+            fontSize: localFontSizes.small,
+            color: '#6b7280',
             textAlign: 'justify',
             maxWidth: '90%',
             margin: `${isFullscreen ? '1vh' : '2mm'} auto 0`
@@ -1150,7 +1150,7 @@ const renderSectorAnalysis = () => {
       </div>
     </div>,
 
-   // Slide 5: Paradox ENI data
+    // Slide 5: Paradox ENI data
     <div key="paradox" style={getSlideStyle()}>
       <div style={getHeaderBarStyle()}>
         <div style={{
@@ -1303,13 +1303,13 @@ const renderSectorAnalysis = () => {
         </div>
       </div>
       <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
-         I. Gap de Produtividade - Comparação vs EU
+        I. Gap de Produtividade - Comparação vs EU
       </h2>
       <div style={{ flex: 1, overflow: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         {renderEuropeanTable()}
         <div style={{ marginTop: isFullscreen ? '3vh' : '8mm', fontSize: getFontSizes().small, color: '#6b7280', textAlign: 'center' }}>
-          <p style={{ margin: 0 }}>Valores em euros por funcionário (2022)</p>
-          <p style={{ margin: `${isFullscreen ? '1vh' : '2mm'} 0 0 0` }}>Fonte: Eurostat, Business Demographics Statistics</p>
+          
+         
         </div>
       </div>
     </div>,
@@ -1320,65 +1320,66 @@ const renderSectorAnalysis = () => {
     // Slide 10: ESAF
     <ESAFSlide key="esaf" />,
 
-    
+
 
     // Slide 12: Microdata
     <div key="microdata1" style={getSlideStyle()}>
-  <div style={getHeaderBarStyle()}>
-    <div style={{
-      width: '100%',
-      height: isFullscreen ? '8vh' : '15mm',
-      position: 'relative',
-      background: '#000080',
-      display: 'block'
-    }}>
-      <img
-        src={`${process.env.PUBLIC_URL}/bar.png`}
-        alt="Header Bar"
-        style={{
+      <div style={getHeaderBarStyle()}>
+        <div style={{
+          width: '100%',
+          height: isFullscreen ? '8vh' : '15mm',
+          position: 'relative',
+          background: '#000080',
+          display: 'block'
+        }}>
+          <img
+            src={`${process.env.PUBLIC_URL}/bar.png`}
+            alt="Header Bar"
+            style={{
+              position: 'absolute',
+              right: 0,
+              top: 0,
+              height: '100%',
+              width: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+        </div>
+      </div>
+      <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
+        III. Micro e PME dados micro - KPIs
+      </h2>
+      <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
+        <iframe
+
+          src={`${process.env.PUBLIC_URL}/metricas_financeiras_distribuicao.html`}
+          style={{
+            width: '100%',
+            height: '100%',
+            border: 'none',
+            backgroundColor: 'white'
+          }}
+          title="KPI's"
+        />
+
+        {/* Legend positioned over the iframe */}
+        <div style={{
           position: 'absolute',
-          right: 0,
-          top: 0,
-          height: '100%',
-          width: 'auto',
-          objectFit: 'contain'
-        }}
-      />
-    </div>
-  </div>
-  <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
-    III. Micro e PME dados micro - KPIs
-  </h2>
-  <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
-    <iframe
-      src="metricas_financeiras_distribuicao.html"
-      style={{
-        width: '100%',
-        height: '100%',
-        border: 'none',
-        backgroundColor: 'white'
-      }}
-      title="KPI's"
-    />
-    
-    {/* Legend positioned over the iframe */}
-    <div style={{ 
-      position: 'absolute',
-      bottom: isFullscreen ? '1vh' : '2mm',
-      left: isFullscreen ? '1vw' : '2mm',
-      fontSize: isFullscreen ? '0.8vh' : '0.75rem',
-      color: '#6b7280',
-      lineHeight: '1.4',
-      textAlign: 'left',
-      backgroundColor: 'rgba(255, 255, 255, 0.9)',
-      padding: isFullscreen ? '0.5vh 1vw' : '1mm 2mm',
-      borderRadius: '2px',
-      zIndex: 10
-    }}>
-      <strong>Fonte:</strong> Moody's Corporation, Moody's Investors Service, Inc.
-    </div>
-  </div>
-</div>,
+          bottom: isFullscreen ? '1vh' : '2mm',
+          left: isFullscreen ? '1vw' : '2mm',
+          fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+          color: '#6b7280',
+          lineHeight: '1.4',
+          textAlign: 'left',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          padding: isFullscreen ? '0.5vh 1vw' : '1mm 2mm',
+          borderRadius: '2px',
+          zIndex: 10
+        }}>
+          <strong>Fonte:</strong> Moody's Corporation, Moody's Investors Service, Inc.
+        </div>
+      </div>
+    </div>,
 
     // Slide 13: Microdata Scoring
     <div key="microdata2" style={getSlideStyle()}>
@@ -1409,7 +1410,7 @@ const renderSectorAnalysis = () => {
       </h2>
       <div style={{ flex: 1, overflow: 'hidden' }}>
         <iframe
-          src="updated_financial_health_summary.html"
+          src={`${process.env.PUBLIC_URL}/updated_financial_health_summary.html`}
           style={{
             width: '100%',
             height: '100%',
@@ -1448,7 +1449,7 @@ const renderSectorAnalysis = () => {
         III. Análise de Saúde Financeira - Classificação Cruzada
       </h2>
       <div style={{ fontSize: getFontSizes().text, lineHeight: '1.4', flex: 1, overflow: 'auto' }}>
-        
+
         {/* Dados Gerais */}
         <div style={{ marginBottom: isFullscreen ? '2vh' : '6mm' }}>
           <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', color: '#2563eb', marginBottom: isFullscreen ? '1vh' : '3mm', margin: `0 0 ${isFullscreen ? '1vh' : '3mm'} 0` }}>
@@ -1466,9 +1467,9 @@ const renderSectorAnalysis = () => {
           <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', color: '#2563eb', marginBottom: isFullscreen ? '1vh' : '3mm', margin: `0 0 ${isFullscreen ? '1vh' : '3mm'} 0` }}>
             🎯 Empresas com Desempenho Consistente
           </h3>
-          
+
           <div style={{ display: 'grid', gridTemplateColumns: isFullscreen ? '1fr 1fr' : '1fr', gap: isFullscreen ? '1vw' : '4mm' }}>
-            
+
             {/* BOM Category */}
             <div style={{ marginBottom: isFullscreen ? '1vh' : '4mm' }}>
               <h4 style={{ fontSize: getFontSizes().text, fontWeight: '600', color: '#16a34a', marginBottom: isFullscreen ? '0.5vh' : '2mm', margin: `0 0 ${isFullscreen ? '0.5vh' : '2mm'} 0` }}>
@@ -1533,7 +1534,7 @@ const renderSectorAnalysis = () => {
         </div>
       </div>
     </div>,
-      // Slide 15: Five Scoring
+    // Slide 15: Five Scoring
     <div key="microdata2" style={getSlideStyle()}>
       <div style={getHeaderBarStyle()}>
         <div style={{
@@ -1562,7 +1563,7 @@ const renderSectorAnalysis = () => {
       </h2>
       <div style={{ flex: 1, overflow: 'hidden' }}>
         <iframe
-          src="ratings_pie_quality_2023.html"
+          src={`${process.env.PUBLIC_URL}/ratings_pie_quality_2023.html`}
           style={{
             width: '100%',
             height: '100%',
@@ -1571,6 +1572,22 @@ const renderSectorAnalysis = () => {
           }}
           title="Scoring de 100k empresas"
         />
+        {/* Legend positioned over the iframe */}
+        <div style={{
+          position: 'absolute',
+          bottom: isFullscreen ? '1vh' : '2mm',
+          left: isFullscreen ? '1vw' : '2mm',
+          fontSize: isFullscreen ? '0.8vh' : '0.75rem',
+          color: '#6b7280',
+          lineHeight: '1.4',
+          textAlign: 'left',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          padding: isFullscreen ? '0.5vh 1vw' : '1mm 2mm',
+          borderRadius: '2px',
+          zIndex: 10
+        }}>
+          <strong>Fonte:</strong> Five Credit internal scoring model.
+        </div>
       </div>
     </div>,
     // Slide 15: Conclusion
@@ -1594,8 +1611,10 @@ const renderSectorAnalysis = () => {
               width: 'auto',
               objectFit: 'contain'
             }}
-          />
+          />´
+
         </div>
+
       </div>
       <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '4vh' : '10mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '4vh' : '10mm'} 0` }}>
         Conclusões Principais
@@ -1604,19 +1623,153 @@ const renderSectorAnalysis = () => {
         <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
           <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
             <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>As ENI representam <strong>66%</strong> das empresas mas apenas <strong>6,5%</strong> do VAB nacional.</span>
+            <span>ENI companies represent <strong>66%</strong> of all firms but only <strong>6.5%</strong> of national GVA. Bridging the productivity gap between ENI and micro-enterprises represents a significant potential margin for enhancing economic growth.</span>
           </li>
           <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
             <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>Gap de produtividade significativo entre Portugal e a <strong>média UE-27</strong>.</span>
+            <span>Portuguese companies show a pronounced productivity gap compared to the <strong>EU-27 average</strong>, with the exception of micro-enterprises which perform comparably.</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
+            <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
+            <span><strong>Access to financing is a multidimensional concept</strong>, and different indicators may convey varying yet reconcilable messages about financing conditions.</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
+            <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
+            <span>The latest <strong>ECB SAFE survey</strong> indicates cyclical improvement in financing access in Portugal, while the <strong>EIF's ESAF indicator</strong> places Portugal at the bottom of European rankings.</span>
           </li>
           <li style={{ display: 'flex', alignItems: 'center' }}>
             <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>Diferenças setoriais variam de <strong>1.3x</strong> até <strong>9.5x</strong> na produtividade.</span>
+            <span>The quality of <strong>corporate financial data</strong> is crucial for enabling robust company assessments. This will become increasingly important given the irreversible trends toward <strong>automation and AI adoption</strong>.</span>
           </li>
         </ul>
       </div>
+    </div>,
+   // Slide 16: Appendix
+<div key="appendix" style={{ ...getSlideStyle(), backgroundColor: '#f9fafb' }}>
+  <div style={getHeaderBarStyle()}>
+    <div style={{
+      width: '100%',
+      height: isFullscreen ? '8vh' : '15mm',
+      position: 'relative',
+      background: '#000080',
+      display: 'block'
+    }}>
+      <img
+        src={`${process.env.PUBLIC_URL}/bar.png`}
+        alt="Header Bar"
+        style={{
+          position: 'absolute',
+          right: 0,
+          top: 0,
+          height: '100%',
+          width: 'auto',
+          objectFit: 'contain'
+        }}
+      />
     </div>
+  </div>
+  <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '6mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '2vh' : '6mm'} 0` }}>
+    Appendix: ESAF Indicator
+  </h2>
+  <div style={{ fontSize: isFullscreen ? '14px' : '11px', lineHeight: '1.3', flex: 1, padding: '0 20px' }}>
+    
+    {/* Loans Section */}
+    <div style={{ marginBottom: isFullscreen ? '1.5vh' : '3mm' }}>
+     <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+        Loans:
+      </h3>
+      <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs using bank loans in last 6 months</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs using grants or subsidised bank loans in last 6 months</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs not applying for a bank loan because of possible rejection in last 6 months</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Interest rate for loans under EUR 250k (floating rate with IRF up to 1 year)</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Interest rate spread (under EUR 250k vs over EUR 1m for floating rate with IRF up to 1 year)</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Equity Section */}
+    <div style={{ marginBottom: isFullscreen ? '1.5vh' : '3mm' }}>
+     <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+        Equity:
+      </h3>
+      <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Venture Capital Investments / GDP</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Value of IPO market / GDP</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs using equity capital in last 6 months</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Credit and Leasing Section */}
+    <div style={{ marginBottom: isFullscreen ? '1.5vh' : '3mm' }}>
+     <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+        Credit and Leasing:
+      </h3>
+      <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs using bank overdraft, credit line or credit card overdraft in last 6 months</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs not applying for the above because of fear of possible rejection in last six months</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs using leasing or hire-purchase in the last 6 months</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Median interest rate charged to SMEs for credit line or bank overdraft application in last 6 months</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Macro Factors Section */}
+    <div>
+     <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+        Macro Factors:
+      </h3>
+      <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Gap between actual and potential GDP</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isFullscreen ? '0.5vh' : '1mm' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Bank non-performing loans to total gross loans</span>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'flex-start' }}>
+          <span style={{ display: 'inline-block', width: '3px', height: '3px', backgroundColor: '#000', marginRight: '6px', marginTop: '6px', flexShrink: 0 }}></span>
+          <span>Percentage of SMEs feeling that there are no financing obstacles</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
   ];
 
   const tabStyle = { padding: '0.5rem 1rem', margin: '0 0.25rem', cursor: 'pointer', border: 'none', background: 'transparent', fontWeight: '500', fontSize: '0.875rem' };
