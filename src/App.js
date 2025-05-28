@@ -1620,29 +1620,29 @@ const BusinessComparisonDashboard = () => {
         Conclusões Principais
       </h2>
       <div style={{ fontSize: getFontSizes().text, lineHeight: '1.6', flex: 1 }}>
-        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
-            <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>ENI companies represent <strong>66%</strong> of all firms but only <strong>6.5%</strong> of national GVA. Bridging the productivity gap between ENI and micro-enterprises represents a significant potential margin for enhancing economic growth.</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
-            <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>Portuguese companies show a pronounced productivity gap compared to the <strong>EU-27 average</strong>, with the exception of micro-enterprises which perform comparably.</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
-            <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span><strong>Access to financing is a multidimensional concept</strong>, and different indicators may convey varying yet reconcilable messages about financing conditions.</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
-            <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>The latest <strong>ECB SAFE survey</strong> indicates cyclical improvement in financing access in Portugal, while the <strong>EIF's ESAF indicator</strong> places Portugal at the bottom of European rankings.</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center' }}>
-            <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
-            <span>The quality of <strong>corporate financial data</strong> is crucial for enabling robust company assessments. This will become increasingly important given the irreversible trends toward <strong>automation and AI adoption</strong>.</span>
-          </li>
-        </ul>
-      </div>
+  <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
+      <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
+      <span>As empresas ENI representam <strong>66%</strong> de todas as empresas mas apenas <strong>6,5%</strong> do VAB nacional. Aproximar a produtividade das ENI à das microempresas representa uma margem potencial significativa para aumentar o crescimento económico.</span>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
+      <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
+      <span>As empresas portuguesas apresentam um gap de produtividade acentuado comparativamente à <strong>média da UE-27</strong>, com exceção das microempresas que têm desempenho comparável.</span>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
+      <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
+      <span><strong>O acesso ao financiamento é um conceito multidimensional</strong>, e diferentes indicadores podem transmitir mensagens variadas mas conciliáveis sobre as condições de financiamento.</span>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: isFullscreen ? '3vh' : '8mm' }}>
+      <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
+      <span>O último <strong>inquérito SAFE do BCE</strong> indica uma melhoria conjuntural do acesso ao financiamento em Portugal, enquanto o <strong>indicador ESAF do FEI</strong> coloca Portugal na cauda dos rankings europeus.</span>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'center' }}>
+      <span style={{ display: 'inline-block', width: isFullscreen ? '2vh' : '6mm', height: isFullscreen ? '2vh' : '6mm', borderRadius: '50%', backgroundColor: '#3b82f6', marginRight: isFullscreen ? '1.5vh' : '4mm', flexShrink: 0 }}></span>
+      <span>A qualidade dos <strong>dados financeiros das empresas</strong> é crucial para permitir avaliações robustas das empresas. Isto será cada vez mais importante dados os trends irreversíveis de <strong>automatização e adoção de IA</strong>.</span>
+    </li>
+  </ul>
+</div>
     </div>,
    // Slide 16: Appendix
 <div key="appendix" style={{ ...getSlideStyle(), backgroundColor: '#f9fafb' }}>
