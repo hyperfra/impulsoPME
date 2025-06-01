@@ -9,7 +9,7 @@ const translations = {
     presenter: "Francesco Franco",
     date: "3 de Junho de 2025",
     title: "Powered by Five Credit",
-    
+
     // Navigation
     previous: "Anterior",
     next: "Próximo",
@@ -17,26 +17,26 @@ const translations = {
     explorerMode: "Modo Explorador",
     presentationMode: "Modo Apresentação",
     fullScreen: "Ecrã Completo",
-    
+
     // Tabs
     percentageDistribution: "Distribuição Percentual",
     pieCharts: "Pie Charts",
     productivity: "Produtividade",
     sectorAnalysis: "Análise por Setor",
     table: "Tabela",
-    
+
     // Chart titles
     percentageDistributionByType: "Distribuição Percentual por Tipo de Empresa",
     companiesInPortugal: "Empresas em Portugal",
     productivityComparison: "Comparação de Produtividade VAB",
     sectorAnalysisTitle: "Análise por Setor: Produtividade VAB",
     comparisonTitle: "Comparação: Empresas Individuais vs Sociedades",
-    
+
     // Legend labels
     individualCompany: "Emp. Individual",
     corporation: "Sociedade",
     average: "Média",
-    
+
     // Table headers
     staffLevel: "Escalão de Pessoal",
     numberOfCompanies: "Número de Empresas",
@@ -47,7 +47,7 @@ const translations = {
     vab: "VAB (€)",
     percentageVAB: "% VAB",
     productivityVAB: "Produtividade VAB (€/func.)",
-    
+
     // Staff levels
     individualCompanies: "Empresas individuais",
     lessThan10: "Menos de 10 pessoas",
@@ -55,7 +55,7 @@ const translations = {
     from20to49: "20-49 pessoas",
     from50to249: "50-249 pessoas",
     over250: "250 ou mais pessoas",
-    
+
     // Slide titles
     growthTitle: "I. Crescimento - Produtividade das Empresas (Macro)",
     financingTitle: "II. Financiamento das PME - Acesso (Macro)",
@@ -73,83 +73,83 @@ const translations = {
     financialHealthTitle: "III. Análise de Saúde Financeira - Classificação Cruzada",
     conclusionsTitle: "Conclusões Principais",
     appendixTitle: "Appendix: ESAF Indicator",
-    
+
     // Content
     eniParadoxTitle: "O \"Paradoxo\" das Empresas em Nome Individual (ENI)",
     eniEmployment: "As ENI são necessárias para o emprego, absorvendo 22% do emprego total",
     eniProductivity: "As ENI apresentam uma produtividade muito baixa e produzem apenas 6,5% do VAB",
     eniLessProductive: "As ENI são 3,2 vezes menos produtivas que as microempresas",
     eniAllSectors: "Este padrão existe em quase todos os setores",
-    
+
     productivityGapTitle: "Gap de Produtividade entre Micro, Pequenas, Medias, e Grandes empresas",
     microLessProductive: "As microempresas são 50% menos produtivas que as grande empresas",
     smallLessProductive: "As pequenas empresas são 28% menos produtivas que as grande empresas",
     mediumLessProductive: "As empresas médias são 1% menos produtivas que as grande empresas (sociedade)",
     euGap: "O gap com a UE-27 é de 13% para as micro, 51% para as pequenas, 27% para as médias e 58% para as grandes",
-    
+
     financingParadoxTitle: "O \"Paradoxo\" do SAFE (ECB) vs ESAF (EIF)",
     safeImprovement: "O inquérito SAFE (BCE) revela uma melhoria no acesso ao financiamento no último semestre, com obstáculos relativamente alinhados com outros países da Zona Euro",
     esafUnfavorable: "O indicador ESAF (FEI) coloca Portugal numa posição muito desfavorável, com apenas 2 países apresentando pior acesso ao financiamento",
     safePerspective: "O SAFE tem uma perspetiva mais conjuntural e centrada no setor bancário. O ESAF tem uma perspectiva mais estrutural e abrangente alem da banca.",
     methodologicalDifferences: "As diferenças metodológicas entre os dois instrumentos explicam este aparente paradoxo",
-    
+
     microdataImportanceTitle: "A Importância da Qualidade dos Dados ao Nível das Empresas e a Complexidade da sua Análise",
     aggregateDataUseful: "Os dados agregados são úteis mas ocultam informação crucial: analisámos uma amostra de +200 mil empresas para obter uma visão mais precisa",
     creditRatingExample: "Um exemplo de análise tradicional de rating de crédito revela uma realidade complexa: 82,5% das empresas apresentam indicadores mistos, com pontos fortes e fracos simultaneamente",
     diversityOpportunities: "Esta diversidade de perfis representa grandes oportunidades de melhoria, especialmente para empresas com desempenho misto que podem beneficiar de apoios direcionados",
     robustAnalysis: "Uma análise robusta do rating de crédito das PME portuguesas exige dados de elevada qualidade e modelos complexos que captem as nuances do tecido empresarial",
-    
+
     // Sources
     source: "Fonte",
     ineSource: "INE, Sistema de contas integradas das empresas (SCIE)",
-    
+
     // Countries
     portugal: "Portugal",
     spain: "Espanha",
     france: "França",
     germany: "Alemanha",
     euAverage: "Média UE-27",
-    
+
     // Financial Health Analysis
     generalData: "🔢 Dados Gerais",
     companiesAnalyzed: "219.927 empresas analisadas com dados completos nos 3 indicadores",
     consistentPerformance: "Apenas 17,5% (38.562 empresas) têm desempenho consistente",
     mixedIndicators: "82,5% das empresas apresentam indicadores financeiros mistos",
-    
+
     consistentPerformanceTitle: "🎯 Empresas com Desempenho Consistente",
     goodCompanies: "🟢 Empresas BOM (8,3% - 18.301)",
     excellentHealth: "Excelente saúde financeira",
     autonomyRoa: "Autonomia > 50%, ROA > 5%",
     mostSolid: "Empresas mais sólidas do mercado",
-    
+
     criticalCompanies: "🔴 Empresas CRÍTICO (7,3% - 16.115)",
     criticalSituation: "Situação crítica em todos indicadores",
     negativeEquity: "Capital próprio negativo",
     urgentRestructuring: "Necessitam reestruturação urgente",
-    
+
     weakCompanies: "🟠 Empresas FRACO (1,0% - 2.240)",
     consistentWeak: "Desempenho fraco consistente",
     lowAutonomyProfitability: "Baixa autonomia e rentabilidade",
     recoverableSituation: "Situação recuperável com gestão adequada",
-    
+
     mediumCompanies: "🟡 Empresas MÉDIO (0,9% - 1.906)",
     balancedMedium: "Desempenho médio equilibrado",
     stableFinancial: "Situação financeira estável",
     solidBase: "Base sólida para crescimento",
-    
+
     mainConclusionsTitle: "📈 Principais Conclusões",
     marketPolarization: "Polarização do mercado: Concentração nas categorias \"Bom\" e \"Crítico\"",
     majorityMixed: "Maioria com indicadores mistos: 82,5% das empresas têm pontos fortes e fracos",
     improvementOpportunities: "Oportunidades de melhoria: Grande potencial para empresas com desempenho misto",
     riskManagement: "Gestão de risco: 7,3% das empresas em situação crítica requerem atenção imediata",
-    
+
     // Conclusions
     conclusion1: "As empresas ENI representam 66% de todas as empresas mas apenas 6,5% do VAB nacional. Aproximar a produtividade das ENI à das microempresas representa uma margem potencial significativa para aumentar o crescimento económico.",
     conclusion2: "As empresas portuguesas apresentam um gap de produtividade acentuado comparativamente à média da UE-27, com exceção das microempresas que têm desempenho comparável.",
     conclusion3: "O acesso ao financiamento é um conceito multidimensional, e diferentes indicadores podem transmitir mensagens variadas mas conciliáveis sobre as condições de financiamento.",
     conclusion4: "O último inquérito SAFE do BCE indica uma melhoria conjuntural do acesso ao financiamento em Portugal, enquanto o indicador ESAF do FEI coloca Portugal na cauda dos rankings europeus.",
     conclusion5: "A qualidade dos dados financeiros das empresas é crucial para permitir avaliações robustas das empresas. Isto será cada vez mais importante dados os trends irreversíveis de automatização e adoção de IA.",
-    
+
     // ESAF/SAFE specific
     esafIndexTitle: "Índice ESAF (EIF) - Financiamento das PME 2023",
     portugalPosition: "Portugal ocupa a 25ª posição (de 27) no Índice ESAF do EIF",
@@ -165,7 +165,7 @@ const translations = {
     presenter: "Francesco Franco",
     date: "June 3rd, 2025",
     title: "Powered by Five Credit",
-    
+
     // Navigation
     previous: "Previous",
     next: "Next",
@@ -173,26 +173,26 @@ const translations = {
     explorerMode: "Explorer Mode",
     presentationMode: "Presentation Mode",
     fullScreen: "Full Screen",
-    
+
     // Tabs
     percentageDistribution: "Percentage Distribution",
     pieCharts: "Pie Charts",
     productivity: "Productivity",
     sectorAnalysis: "Sector Analysis",
     table: "Table",
-    
+
     // Chart titles
     percentageDistributionByType: "Percentage Distribution by Company Type",
     companiesInPortugal: "Companies in Portugal",
     productivityComparison: "GVA Productivity Comparison",
     sectorAnalysisTitle: "Sector Analysis: GVA Productivity",
     comparisonTitle: "Comparison: Individual Companies vs Corporations",
-    
+
     // Legend labels
     individualCompany: "Individual Company",
     corporation: "Corporation",
     average: "Average",
-    
+
     // Table headers
     staffLevel: "Staff Level",
     numberOfCompanies: "Number of Companies",
@@ -203,7 +203,7 @@ const translations = {
     vab: "GVA (€)",
     percentageVAB: "% GVA",
     productivityVAB: "GVA Productivity (€/emp.)",
-    
+
     // Staff levels
     individualCompanies: "Individual companies",
     lessThan10: "Less than 10 people",
@@ -211,7 +211,7 @@ const translations = {
     from20to49: "20-49 people",
     from50to249: "50-249 people",
     over250: "250 or more people",
-    
+
     // Slide titles
     growthTitle: "I. Growth - Company Productivity (Macro)",
     financingTitle: "II. SME Financing - Access (Macro)",
@@ -229,83 +229,83 @@ const translations = {
     financialHealthTitle: "III. Financial Health Analysis - Cross Classification",
     conclusionsTitle: "Main Conclusions",
     appendixTitle: "Appendix: ESAF Indicator",
-    
+
     // Content
     eniParadoxTitle: "The \"Paradox\" of Individual Companies (ENI)",
     eniEmployment: "Individual companies are necessary for employment, absorbing 22% of total employment",
     eniProductivity: "Individual companies have very low productivity and produce only 6.5% of GVA",
     eniLessProductive: "Individual companies are 3.2 times less productive than micro companies",
     eniAllSectors: "This pattern exists in almost all sectors",
-    
+
     productivityGapTitle: "Productivity Gap between Micro, Small, Medium, and Large companies",
     microLessProductive: "Micro companies are 50% less productive than large companies",
     smallLessProductive: "Small companies are 28% less productive than large companies",
     mediumLessProductive: "Medium companies are 1% less productive than large companies (corporation)",
     euGap: "The gap with EU-27 is 13% for micro, 51% for small, 27% for medium and 58% for large companies",
-    
+
     financingParadoxTitle: "The \"Paradox\" of SAFE (ECB) vs ESAF (EIF)",
     safeImprovement: "The SAFE survey (ECB) reveals an improvement in access to financing in the last semester, with obstacles relatively aligned with other Eurozone countries",
     esafUnfavorable: "The ESAF indicator (EIF) places Portugal in a very unfavorable position, with only 2 countries showing worse access to financing",
     safePerspective: "SAFE has a more cyclical perspective focused on the banking sector. ESAF has a more structural and comprehensive perspective beyond banking.",
     methodologicalDifferences: "Methodological differences between the two instruments explain this apparent paradox",
-    
+
     microdataImportanceTitle: "The Importance of Data Quality at Company Level and the Complexity of Analysis",
     aggregateDataUseful: "Aggregate data is useful but hides crucial information: we analyzed a sample of +200 thousand companies to obtain a more precise view",
     creditRatingExample: "An example of traditional credit rating analysis reveals a complex reality: 82.5% of companies present mixed indicators, with strengths and weaknesses simultaneously",
     diversityOpportunities: "This diversity of profiles represents great improvement opportunities, especially for companies with mixed performance that can benefit from targeted support",
     robustAnalysis: "A robust analysis of Portuguese SME credit rating requires high-quality data and complex models that capture the nuances of the business fabric",
-    
+
     // Sources
     source: "Source",
     ineSource: "INE, Integrated Business Accounts System (SCIE)",
-    
+
     // Countries
     portugal: "Portugal",
     spain: "Spain",
     france: "France",
     germany: "Germany",
     euAverage: "EU-27 Average",
-    
+
     // Financial Health Analysis
     generalData: "🔢 General Data",
     companiesAnalyzed: "219,927 companies analyzed with complete data on the 3 indicators",
     consistentPerformance: "Only 17.5% (38,562 companies) have consistent performance",
     mixedIndicators: "82.5% of companies present mixed financial indicators",
-    
+
     consistentPerformanceTitle: "🎯 Companies with Consistent Performance",
     goodCompanies: "🟢 GOOD Companies (8.3% - 18,301)",
     excellentHealth: "Excellent financial health",
     autonomyRoa: "Autonomy > 50%, ROA > 5%",
     mostSolid: "Most solid companies in the market",
-    
+
     criticalCompanies: "🔴 CRITICAL Companies (7.3% - 16,115)",
     criticalSituation: "Critical situation in all indicators",
     negativeEquity: "Negative equity",
     urgentRestructuring: "Require urgent restructuring",
-    
+
     weakCompanies: "🟠 WEAK Companies (1.0% - 2,240)",
     consistentWeak: "Consistent weak performance",
     lowAutonomyProfitability: "Low autonomy and profitability",
     recoverableSituation: "Recoverable situation with adequate management",
-    
+
     mediumCompanies: "🟡 MEDIUM Companies (0.9% - 1,906)",
     balancedMedium: "Balanced medium performance",
     stableFinancial: "Stable financial situation",
     solidBase: "Solid base for growth",
-    
+
     mainConclusionsTitle: "📈 Main Conclusions",
     marketPolarization: "Market polarization: Concentration in \"Good\" and \"Critical\" categories",
     majorityMixed: "Majority with mixed indicators: 82.5% of companies have strengths and weaknesses",
     improvementOpportunities: "Improvement opportunities: Great potential for companies with mixed performance",
     riskManagement: "Risk management: 7.3% of companies in critical situation require immediate attention",
-    
+
     // Conclusions
     conclusion1: "Individual companies represent 66% of all companies but only 6.5% of national GVA. Bringing individual company productivity closer to micro companies represents a significant potential margin to increase economic growth.",
     conclusion2: "Portuguese companies show a marked productivity gap compared to the EU-27 average, except for micro companies which have comparable performance.",
     conclusion3: "Access to financing is a multidimensional concept, and different indicators can convey varied but reconcilable messages about financing conditions.",
     conclusion4: "The latest ECB SAFE survey indicates a cyclical improvement in access to financing in Portugal, while the EIF ESAF indicator places Portugal at the bottom of European rankings.",
     conclusion5: "The quality of company financial data is crucial to enable robust company assessments. This will become increasingly important given the irreversible trends of automation and AI adoption.",
-    
+
     // ESAF/SAFE specific
     esafIndexTitle: "ESAF Index (EIF) - SME Financing 2023",
     portugalPosition: "Portugal ranks 25th (out of 27) in the EIF ESAF Index",
@@ -450,7 +450,7 @@ const BusinessComparisonDashboard = () => {
   ];
 
   const tableData = {
-    headers: language === 'pt' ? 
+    headers: language === 'pt' ?
       ["", "Empresa individual", "Sociedade", "TOTAL"] :
       ["", "Individual Company", "Corporation", "TOTAL"],
     rows: language === 'pt' ? [
@@ -639,7 +639,7 @@ const BusinessComparisonDashboard = () => {
   const renderSectorAnalysis = () => {
     const chartHeight = isFullscreen ? '65vh' : '450px';
     const translatedSectorData = getTranslatedSectorData();
-    
+
     return (
       <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
         <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', textAlign: 'center', marginBottom: isFullscreen ? '2vh' : '1.5rem' }}>
@@ -806,7 +806,7 @@ const BusinessComparisonDashboard = () => {
       "% Employees", "Turnover (€)",
       "GVA (€)", "% GVA", "GVA Productivity (€/emp.)"
     ];
-    
+
     const fontSize = getFontSizes();
     const cellPadding = isFullscreen ? '1vh 0.8vw' : '3mm';
 
@@ -957,10 +957,10 @@ const BusinessComparisonDashboard = () => {
 
   const renderEuropeanTable = () => {
     const translatedEuropeData = getTranslatedEuropeData();
-    const headers = language === 'pt' ? 
+    const headers = language === 'pt' ?
       ["País", "Total", "Micro (0-9)", "Pequena (10-49)", "Média (50-249)", "Grande (250+)"] :
       ["Country", "Total", "Micro (0-9)", "Small (10-49)", "Medium (50-249)", "Large (250+)"];
-    
+
     const fontSize = getFontSizes();
     const cellPadding = isFullscreen ? '1.2vh 1vw' : '4mm';
 
@@ -1021,7 +1021,8 @@ const BusinessComparisonDashboard = () => {
                     textAlign: 'center',
                     borderBottom: '1px solid #e5e7eb',
                     fontSize: fontSize.tableText,
-                    whiteSpace: 'nowrap'}}>
+                    whiteSpace: 'nowrap'
+                  }}>
                     €{row.total.toLocaleString(language === 'pt' ? 'pt-PT' : 'en-US')}
                   </td>
                   <td style={{
@@ -1072,7 +1073,7 @@ const BusinessComparisonDashboard = () => {
             lineHeight: '1.4',
             textAlign: 'left'
           }}>
-            <strong>{t('source')}:</strong> {language === 'pt' ? 
+            <strong>{t('source')}:</strong> {language === 'pt' ?
               'INE, Sistema de contas integradas das empresas (SCIE) e Eurostat, Structural business statistics (SBS). Os cálculos para médias e grandes empresas são efetuados com base nos dados do INE, uma vez que estes dados são classificados como confidenciais no Eurostat. Por conseguinte, podem existir algumas limitações de comparabilidade.' :
               'INE, Integrated Business Accounts System (SCIE) and Eurostat, Structural business statistics (SBS). Calculations for medium and large companies are based on INE data, as this data is classified as confidential in Eurostat. Therefore, some comparability limitations may exist.'
             }
@@ -1459,58 +1460,58 @@ const BusinessComparisonDashboard = () => {
       </div>
     </div>,
 
-// Slide 3: Growth (CORRECTED VERSION)
-<div key="growth" style={getSlideStyle()}>
-  <div style={getHeaderBarStyle()}>
-    <div style={{
-      width: '100%',
-      height: isFullscreen ? '8vh' : '15mm',
-      position: 'relative',
-      background: '#000080',
-      display: 'block'
-    }}>
-      <img
-        src={`${process.env.PUBLIC_URL}/bar.png`}
-        alt="Header Bar"
-        style={{
-          position: 'absolute',
-          right: 0,
-          top: 0,
-          height: '100%',
-          width: 'auto',
-          objectFit: 'contain'
-        }}
-      />
-    </div>
-  </div>
-  <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'left', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
-    {t('growthTitle')}
-  </h2>
-  <div style={{ fontSize: getFontSizes().text, lineHeight: '1.4', flex: 1, overflow: 'auto' }}>
-    <div style={{ marginBottom: isFullscreen ? '3vh' : '10mm' }}>
-      <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', color: '#2563eb', marginBottom: isFullscreen ? '2vh' : '6mm', margin: `0 0 ${isFullscreen ? '2vh' : '6mm'} 0` }}>
-        {t('eniParadoxTitle')}
-      </h3>
-      <ul style={{ listStyleType: 'disc', paddingLeft: isFullscreen ? '3vw' : '8mm', margin: 0 }}>
-        <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('eniEmployment')}</li>
-        <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('eniProductivity')}</li>
-        <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('eniLessProductive')}</li>
-        <li>{t('eniAllSectors')}</li>
-      </ul>
-    </div>
-    <div>
-      <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', color: '#2563eb', marginBottom: isFullscreen ? '2vh' : '6mm', margin: `0 0 ${isFullscreen ? '2vh' : '6mm'} 0` }}>
-        {t('productivityGapTitle')}
-      </h3>
-      <ul style={{ listStyleType: 'disc', paddingLeft: isFullscreen ? '3vw' : '8mm', margin: 0 }}>
-        <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('microLessProductive')}</li>
-        <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('smallLessProductive')}</li>
-        <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('mediumLessProductive')}</li>
-        <li>{t('euGap')}</li>
-      </ul>
-    </div>
-  </div>
-</div>,
+    // Slide 3: Growth (CORRECTED VERSION)
+    <div key="growth" style={getSlideStyle()}>
+      <div style={getHeaderBarStyle()}>
+        <div style={{
+          width: '100%',
+          height: isFullscreen ? '8vh' : '15mm',
+          position: 'relative',
+          background: '#000080',
+          display: 'block'
+        }}>
+          <img
+            src={`${process.env.PUBLIC_URL}/bar.png`}
+            alt="Header Bar"
+            style={{
+              position: 'absolute',
+              right: 0,
+              top: 0,
+              height: '100%',
+              width: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+        </div>
+      </div>
+      <h2 style={{ fontSize: getFontSizes().title, fontWeight: 'bold', textAlign: 'left', marginBottom: isFullscreen ? '3vh' : '8mm', color: '#1e40af', margin: `0 0 ${isFullscreen ? '3vh' : '8mm'} 0` }}>
+        {t('growthTitle')}
+      </h2>
+      <div style={{ fontSize: getFontSizes().text, lineHeight: '1.4', flex: 1, overflow: 'auto' }}>
+        <div style={{ marginBottom: isFullscreen ? '3vh' : '10mm' }}>
+          <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', color: '#2563eb', marginBottom: isFullscreen ? '2vh' : '6mm', margin: `0 0 ${isFullscreen ? '2vh' : '6mm'} 0` }}>
+            {t('eniParadoxTitle')}
+          </h3>
+          <ul style={{ listStyleType: 'disc', paddingLeft: isFullscreen ? '3vw' : '8mm', margin: 0 }}>
+            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('eniEmployment')}</li>
+            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('eniProductivity')}</li>
+            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('eniLessProductive')}</li>
+            <li>{t('eniAllSectors')}</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style={{ fontSize: getFontSizes().subtitle, fontWeight: '600', color: '#2563eb', marginBottom: isFullscreen ? '2vh' : '6mm', margin: `0 0 ${isFullscreen ? '2vh' : '6mm'} 0` }}>
+            {t('productivityGapTitle')}
+          </h3>
+          <ul style={{ listStyleType: 'disc', paddingLeft: isFullscreen ? '3vw' : '8mm', margin: 0 }}>
+            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('microLessProductive')}</li>
+            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('smallLessProductive')}</li>
+            <li style={{ marginBottom: isFullscreen ? '1vh' : '3mm' }}>{t('mediumLessProductive')}</li>
+            <li>{t('euGap')}</li>
+          </ul>
+        </div>
+      </div>
+    </div>,
 
     // Slide 4: Financing
     <div key="financing" style={getSlideStyle()}>
@@ -1763,7 +1764,7 @@ const BusinessComparisonDashboard = () => {
       </h2>
       <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
         <iframe
-          src={`${process.env.PUBLIC_URL}/metricas_financeiras_distribuicao.html`}
+          src={`${process.env.PUBLIC_URL}/metricas_financeiras_distribuicao${language === 'en' ? '_en' : ''}.html`}
           style={{
             width: '100%',
             height: '100%',
@@ -1819,7 +1820,7 @@ const BusinessComparisonDashboard = () => {
       </h2>
       <div style={{ flex: 1, overflow: 'hidden' }}>
         <iframe
-          src={`${process.env.PUBLIC_URL}/updated_financial_health_summary.html`}
+          src={`${process.env.PUBLIC_URL}/updated_financial_health_summary${language === 'en' ? '_en' : ''}.html`}
           style={{
             width: '100%',
             height: '100%',
@@ -1973,7 +1974,7 @@ const BusinessComparisonDashboard = () => {
       </h2>
       <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
         <iframe
-          src={`${process.env.PUBLIC_URL}/ratings_pie_quality_2023.html`}
+          src={`${process.env.PUBLIC_URL}/ratings_pie_quality_2023${language === 'en' ? '_en' : ''}.html`}
           style={{
             width: '100%',
             height: '100%',
@@ -2081,10 +2082,10 @@ const BusinessComparisonDashboard = () => {
         {t('appendixTitle')}
       </h2>
       <div style={{ fontSize: isFullscreen ? '14px' : '11px', lineHeight: '1.3', flex: 1, padding: '0 20px' }}>
-        
+
         {/* Loans Section */}
         <div style={{ marginBottom: isFullscreen ? '1.5vh' : '3mm' }}>
-         <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+          <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
             {language === 'pt' ? 'Empréstimos:' : 'Loans:'}
           </h3>
           <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -2113,7 +2114,7 @@ const BusinessComparisonDashboard = () => {
 
         {/* Equity Section */}
         <div style={{ marginBottom: isFullscreen ? '1.5vh' : '3mm' }}>
-         <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+          <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
             {language === 'pt' ? 'Capital Próprio:' : 'Equity:'}
           </h3>
           <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -2134,7 +2135,7 @@ const BusinessComparisonDashboard = () => {
 
         {/* Credit and Leasing Section */}
         <div style={{ marginBottom: isFullscreen ? '1.5vh' : '3mm' }}>
-         <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+          <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
             {language === 'pt' ? 'Crédito e Leasing:' : 'Credit and Leasing:'}
           </h3>
           <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -2159,7 +2160,7 @@ const BusinessComparisonDashboard = () => {
 
         {/* Macro Factors Section */}
         <div>
-         <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
+          <h3 style={{ fontSize: isFullscreen ? '28px' : '24px', fontWeight: 'bold', color: '#1e40af', marginBottom: isFullscreen ? '0.8vh' : '2mm' }}>
             {language === 'pt' ? 'Fatores Macro:' : 'Macro Factors:'}
           </h3>
           <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -2249,12 +2250,12 @@ const BusinessComparisonDashboard = () => {
           {/* Language Toggle Button */}
           <button onClick={toggleLanguage}
             style={{
-              padding: '0.5rem 1rem', 
-              backgroundColor: '#10b981', 
-              color: 'white', 
+              padding: '0.5rem 1rem',
+              backgroundColor: '#10b981',
+              color: 'white',
               border: 'none',
-              borderRadius: '0.25rem', 
-              cursor: 'pointer', 
+              borderRadius: '0.25rem',
+              cursor: 'pointer',
               fontWeight: '500',
               display: 'flex',
               alignItems: 'center',
@@ -2262,7 +2263,7 @@ const BusinessComparisonDashboard = () => {
             }}>
             🌐 {language === 'pt' ? 'English' : 'Português'}
           </button>
-          
+
           <button onClick={() => setIsPresentation(!isPresentation)}
             style={{
               padding: '0.5rem 1rem', backgroundColor: '#f3f4f6', color: '#374151', border: '1px solid #d1d5db',
