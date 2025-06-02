@@ -6,7 +6,7 @@ const translations = {
   pt: {
     // Company info
     companyName: "Desafios das PME",
-    presenter: "Francesco Franco",
+    presenter: "Francesco Franco - Managing Partner Five Credit",
     date: "3 de Junho de 2025",
     title: "Powered by Five Credit",
 
@@ -349,7 +349,7 @@ const BusinessComparisonDashboard = () => {
   ];
 
   const europeData = [
-    { country: "Portugal", total: 31027, micro: 29186, small: 31853, medium: 43127, large: 43602 },
+    { country: "Portugal", total: 31027, micro: 29186, small: 33707, medium: 43127, large: 43602 },
     { country: "Espanha", total: 45500, micro: 32000, small: 48000, medium: 52000, large: 65000 },
     { country: "França", total: 52000, micro: 35000, small: 51000, medium: 58000, large: 72000 },
     { country: "Alemanha", total: 58000, micro: 38000, small: 55000, medium: 65000, large: 78000 },
@@ -1074,8 +1074,8 @@ const BusinessComparisonDashboard = () => {
             textAlign: 'left'
           }}>
             <strong>{t('source')}:</strong> {language === 'pt' ?
-              'INE, Sistema de contas integradas das empresas (SCIE) e Eurostat, Structural business statistics (SBS). Os cálculos para médias e grandes empresas são efetuados com base nos dados do INE, uma vez que estes dados são classificados como confidenciais no Eurostat. Por conseguinte, podem existir algumas limitações de comparabilidade.' :
-              'INE, Integrated Business Accounts System (SCIE) and Eurostat, Structural business statistics (SBS). Calculations for medium and large companies are based on INE data, as this data is classified as confidential in Eurostat. Therefore, some comparability limitations may exist.'
+              'INE, Sistema de contas integradas das empresas (SCIE) e Eurostat, Structural business statistics (SBS). Os cálculos para médias e grandes empresas são efetuados com base nos dados do INE, uma vez que estes dados são classificados como confidenciais no Eurostat. Por conseguinte, podem existir algumas limitações de comparabilidade. Para Portugal o unico dado do SBS e o das pequenas. O dado SBS do VAB para media e pequenas para Portugal e confidencial.' :
+              'INE, Integrated Business Accounts System (SCIE) and Eurostat, Structural business statistics (SBS). Calculations for medium and large companies are based on INE data, as this data is classified as confidential in Eurostat. Therefore, some comparability limitations may exist. For Portugal the only data from SBS is the one for Small firms. The SBS data for the VAB for medium and large Portuguese companies is confidential'
             }
           </div>
         </div>
